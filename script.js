@@ -4,12 +4,12 @@ let operator = "";
 let firstOperand = "";
 let resultShown = false;
 
-// Update display
+ 
 function updateDisplay(value) {
   display.value = value;
 }
 
-// Number button click
+ 
 function appendNumber(num) {
   if (resultShown) {
     currentInput = "";
@@ -19,7 +19,7 @@ function appendNumber(num) {
   updateDisplay(currentInput);
 }
 
-// Decimal point
+ 
 function appendDot() {
   if (!currentInput.includes(".")) {
     currentInput += ".";
@@ -27,23 +27,23 @@ function appendDot() {
   }
 }
 
-// Operator button click
+ 
 function appendOperator(op) {
   if (currentInput === "") return;
 
   if (firstOperand && operator && currentInput !== "") {
-    calculate(); // calculate previous expression
+    calculate();  
   }
 
   firstOperand = currentInput;
   operator = op;
   currentInput = "";
 
-  // ✅ Show operator on screen
+  
   updateDisplay(firstOperand + " " + getSymbol(op));
 }
 
-// Replace symbols for display
+ 
 function getSymbol(op) {
   switch (op) {
     case "*": return "×";
@@ -54,7 +54,7 @@ function getSymbol(op) {
   }
 }
 
-// Clear display
+ 
 function clearDisplay() {
   currentInput = "";
   firstOperand = "";
@@ -63,13 +63,13 @@ function clearDisplay() {
   updateDisplay("");
 }
 
-// Backspace one digit
+ 
 function backspace() {
   currentInput = currentInput.slice(0, -1);
   updateDisplay(currentInput);
 }
 
-// Calculate result
+ 
 function calculate() {
   if (firstOperand === "" || currentInput === "") return;
 
