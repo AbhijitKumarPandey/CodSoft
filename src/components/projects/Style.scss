@@ -1,0 +1,104 @@
+.projects{
+    padding: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title{
+        width: 300px;
+    }
+    section{
+        padding-top: 5vh;
+        .project{
+            padding: 5vh 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            img{
+                width: 300px;
+                height: 200px;
+                border-radius: 15px;
+                object-fit: cover;
+                box-shadow: 1px 1px 10px;
+            }
+            .content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                width: 300px;
+                h3{
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                }
+                p{
+                    font-size: 0.9rem;
+                    line-height: 1.2;
+                    text-align: justify;
+                    color: rgb(84, 84, 84);
+                }
+                .options{
+                    display: flex;
+                    width: 250px;
+                    justify-content: center;
+                    gap: 20px;
+                    // background-color: red;
+                    p{
+                        color: black;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        padding: 5px 10px;
+                    }
+                    p:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:768px){
+    .projects{
+        .title{
+            width: 500px;
+        }
+        section{
+            display:flex;
+            flex-direction: column;
+            gap: 5vh;
+
+            .project{
+                flex-direction:row;
+            }
+            .project2{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+@media(min-width:1024px){
+    .projects{
+        .title{
+            font-size: 1.2rem;
+        }
+        section{
+            .project{
+                img{
+                    width: 350px;
+                    height: 250px;
+                }
+                .content{
+                    width: 350px;
+                    
+                }
+            }
+        }
+    }
+}
