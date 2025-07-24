@@ -5,7 +5,7 @@ import job from '../../assets/job-form.jpg'
 
 const Projects = () => {
   return (
-    <div className="projects">
+    <div className="projects bg-black text-white">
       <p className='title font-semibold text-blue-500'>Projects</p>
       <p className='title font-semibold'>Each project is a unique piece of development🧑‍💻</p>
       <section>

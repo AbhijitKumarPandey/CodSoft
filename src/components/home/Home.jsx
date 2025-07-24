@@ -6,7 +6,7 @@ import Contact from '../contact/Contact'
 
 const Home = () => {
   return (
-    <div className='py-5'>
+    <div className='py-5 bg-black text-white'>
       <Hero/>
       <About/>
       <Projects/>
